@@ -2,23 +2,22 @@ const API_URL ="https://jsonplaceholder.typicode.com/users";
 
 
 //getUsers
-export const getUsers = async () : Promise<any> => {
+export const getUsers = async () => {
     const response = await fetch(API_URL);
 
     return await response.json();
 };
 
 //geleteUsers 
-export const deleteUsers = async ( id: any) : Promise<any> => {
-    const responser = await fetch(input: `${API_URL}/${id}`, {
-        method: "DELETE",
-    });
-
-    return await responser.json();
+export const deleteUsers = async (id) => {
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: "DELETE",
+  });
+  return await response.json();
 };
 
 //editUsers
-export const updateUser = async (user) : Promise<any> => {
+export const updateUser = async (user) => {
     /* let response = null;
     if (!user.ide){
         // agregamos usuario
